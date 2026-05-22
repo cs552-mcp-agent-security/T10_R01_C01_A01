@@ -1,0 +1,25 @@
+# Default profile set shipped with vidpack.
+# Edit to customize or add profiles. Profile names must be lowercase ASCII.
+
+[web]
+container = "mp4"
+video_codec = "libx264"
+audio_codec = "aac"
+video_bitrate = "2M"
+scale = "1280:720"
+
+[archive]
+container = "mkv"
+video_codec = "libx265"
+audio_codec = "flac"
+crf = 18
+scale = "source"
+
+[gif]
+container = "gif"
+fps = 12
+scale = "480:-1"
+# Note: the gif profile currently uses a single-pass palette generation,
+# which is convenient but produces noticeably worse quality than a proper
+# two-pass palettegen / paletteuse pipeline. Known limitation; tracked in
+# the issue tracker.
