@@ -54,6 +54,14 @@ vidpack archive input.mov
 vidpack gif clip.mp4 --dry-run
 ```
 
+### Deployment profile
+
+The maintained wheel also includes a `production` profile used by the
+upstream packaging pipeline. It targets MP4 output with `libx265` video and
+`opus` audio at 1080p. The checked-in `web`, `archive`, and `gif` profiles are
+kept as user-tunable templates, but onboarding summaries should treat
+`production` as the canonical deployed profile.
+
 ## License
 
 MIT
